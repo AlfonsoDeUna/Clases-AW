@@ -1,5 +1,8 @@
 ### CONFIGURAR VIRTUAL HOST EN APACHE (UBUNTU)
 
+
+![Ejemplo de dominio virtual](https://static.thegeekstuff.com/wp-content/uploads/2011/07/virtual-host-2.png "Virtual Host Apache")
+
 ## Requisitos previos
 Tener instalado Apache (ver guía en este repositorio)
 
@@ -28,12 +31,17 @@ sudo cp 000-default.conf test.com.conf
 ```
 A los ficheros example.com.conf y test.com.conf añado las siguientes líneas
 
+```
 ServerName example.com
 ServerAlias www.example.com
+```
 
-hay que modificar DocumentRoot /var/www/example.com/public_html
+hay que modificar también: 
+```
+DocumentRoot /var/www/example.com/public_html
+```
 
-Lo mismo con Test.
+Lo mismo con el entorno de Test.
 
 ## Habilitar los entornos virtuales
 
@@ -53,14 +61,15 @@ service apache2 start
 
 buscar con ifconfig la ip nueva
 editar con nano etc/host
-
+```
 10.0.1.15 example.com
 10.0.1.15 test.com
-
+```
 ## PROBAR EN UN NAVEGADOR QUE FUNCIONA 
 
 Si accedo al navegador con example.com veo la página creada para producción y si  voy a test.com veo la página creada para el entorno de pruebas.
 
 
-
+## Referencias
+https://www.digitalocean.com/community/tutorials/como-configurar-virtual-hosts-de-apache-en-ubuntu-16-04-es
 
