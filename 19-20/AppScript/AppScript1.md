@@ -38,3 +38,20 @@ function createMenu(){
   sh.addMenu("Formateo paginas",menuEntries);
 }
 ```
+
+### Obtener datos de las columnas de Google Sheets
+
+Hay varias formas para obtener todos los valores de una fila.
+
+* Notación de referencias de hoja de cálculo 1:1
+* Usar la notación de array miArray[i]
+* Usar getRange(fila, columna, numeroFilas,numeroColumnas)
+
+Por ejemplo, podemos usar
+
+* var numFila = e.range.rowStart; 
+* var fila = gSheet.getRange(numFila + ":" + numFila);
+* var valoresFila = fila.getValues(); donde valoresFila será un array de arrays de 1 x número de columnas de la hoja.
+
+Si quieres limitar a sólo las filas del rango de datos (data range), podemos usar getLastColumn() el cual es ciertas circunstancias podría ser muy lento, o bien usar gSheet.getDataRange().getValues()[0].length para obtener el número de columnas de rango de datos.
+
