@@ -39,6 +39,56 @@ function createMenu(){
 }
 ```
 
+### Copiar datos de un google Sheet a otro
+```
+function Exportar() {
+var spreadsheet1 = SpreadsheetApp.openById("1Xl4pWgPpPdzk7vLyrrdtEx4JV1wSvrhTYrp-z8OhLTY");
+var spreadsheet2 = SpreadsheetApp.openById("14ilkiECtg4lRoLxZBVfFXnoYFISAuQ2-dDIoxOz3qXc");
+var hoja1 = spreadsheet1.getSheetByName("Hoja 1"); //Nombre de las hoja 1
+var hoja2 = spreadsheet1.getSheetByName("Hoja 2"); //Nombre de la hoja 2
+var datoshoja1 = hoja1.getDataRange().getValues();
+var datoshoja2 = hoja2.getDataRange().getValues();
+var nombre =[];
+var email =[];
+var telefono =[];
+var mensaje =[];
+var urllanding =[];
+var fechausuario =[];
+var idusuario =[];
+
+ var hoja1sheet2 = spreadsheet2.getSheetByName("DatosReporteUsuario");
+
+ for(var i=0; i<datoshoja1.length; i++){    
+
+ hoja1sheet2.appendRow([datoshoja1[i][0], datoshoja1[i][1], datoshoja1[i][2], datoshoja1[i][3], datoshoja1[i][4],datoshoja1[i][5]]); 
+}   
+for(var i=0; i<datoshoja2.length; i++){ 
+var rowh2 = datoshoja2[i]; 
+nombre[i] = rowh2[1];
+email[i] = rowh2[2]; 
+telefono[i] = rowh2[3]; 
+mensaje[i] = rowh2[4]; 
+urllanding[i] = rowh2[5]; 
+fechausuario[i] = rowh2[6]; 
+idusuario[i] = rowh2[0];
+}
+for(var i=1; i<datoshoja2.length; i++){
+hoja1sheet2.getRange('G'+(i+1)).setValue(nombre[i]);
+hoja1sheet2.getRange('H'+(i+1)).setValue(email[i]);
+hoja1sheet2.getRange('I'+(i+1)).setValue(telefono[i]);
+hoja1sheet2.getRange('J'+(i+1)).setValue(mensaje[i]);
+hoja1sheet2.getRange('K'+(i+1)).setValue(urllanding[i]);
+hoja1sheet2.getRange('L'+(i+1)).setValue(fechausuario[i]);
+hoja1sheet2.getRange('M'+(i+1)).setValue(idusuario[i]);
+
+hoja1.clear();
+hoja2.clear();
+// hoja1.getRange(2, 1, nuevosvalores.length, hoja1.getLastColumn()).setValues(nuevosvalores);
+
+}
+}
+```
+
 ### Obtener datos de las columnas de Google Sheets
 
 Hay varias formas para obtener todos los valores de una fila.
