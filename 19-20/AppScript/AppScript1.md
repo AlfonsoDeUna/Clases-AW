@@ -19,13 +19,22 @@ Una vez creada la función vamos a Goggle Sheet y escribimos en una celda = myAg
 
 ```
 Logger.log (' aquí ponemos lo que queramos sacar , lo ideal es poner una variable para ver su valor ')
+
 ```
 
 ### Crear una pequeña pantalla para recoger algún dato (p.E Recoger el nombre del usuario)
 
 ```
-var name = Browser.inputBox('Enter your name', Browser.Buttons.OK_
-CANCEL);
+var name = Browser.inputBox('Enter your name', Browser.Buttons.OK_CANCEL);
 
 ```
 
+### Añadir un nuevo elemento al menú de Google Sheets y que realice una acción
+
+```
+function createMenu(){
+  var menuEntries = [ {name: "resetPageLayout", functionName:"resetPageLayout"}];
+  var sh = SpreadsheetApp.getActiveSpreadsheet();
+  sh.addMenu("Formateo paginas",menuEntries);
+}
+```
