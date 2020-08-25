@@ -27,6 +27,8 @@
 * web + datos (scrapping) + visualización de datos.
 * Web Hacking... (Recopilación de técnicas de hacking).
 * Control remoto de cosas vía web.
-* creación de aplicación móvil a través de tecnología http.
+* creación de aplicación móvil a través de tecnología http. https://www.youtube.com/watch?v=eJa8xie9WZs
+* 5 proyectos en javascript que te contratarán: https://www.youtube.com/watch?v=lUUOMdnLBqY
+* documental de cómo y los inicios de internet, http
 
 
