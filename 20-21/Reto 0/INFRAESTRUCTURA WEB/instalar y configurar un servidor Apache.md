@@ -9,6 +9,11 @@ Comenzamos viendo este vídeo para que podamos sentir lo que es estar dentro de 
 
 https://linuxhint.com/install_apache_web_server_ubuntu/
 
+Español y más completa
+
+https://www.digitalocean.com/community/tutorials/how-to-install-the-apache-web-server-on-ubuntu-20-04-es#:~:text=Configuraci%C3%B3n%20del%20servidor,principal%20de%20configuraci%C3%B3n%20de%20Apache.
+
+
 ## DOCUMENTACIÓN OFICIAL DE APACHE
 
 https://httpd.apache.org/
