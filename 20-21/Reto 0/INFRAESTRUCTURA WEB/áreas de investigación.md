@@ -22,3 +22,11 @@ https://extrehost.com/articles/2-ns/55-analizar-el-registro-log-de-apache-web-se
 ### Endurecimiento de las medidas de seguridad para servidores web
 https://geekflare.com/apache-web-server-hardening-security/
 
+### Más medidas de seguridad
+https://geekflare.com/10-best-practices-to-secure-and-harden-your-apache-web-server/
+
+Ejemplo con metaexploitable2 del hacking web con Metaexploit
+https://www.youtube.com/watch?v=FGUydmaEiU0
+
+
+
