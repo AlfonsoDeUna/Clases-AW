@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <script>
+            var num1 = 0;
+            var num2 = 0;
+            
+            function cargavalor(val, button) {
+                
+                if (button == 1) {
+                    num1 = val;
+                    console.log(num1);
+                }
+                else{
+                    num2 = val;
+                    console.log(num2);
+                    
+                }
+                
+                document.getElementById("panel").value =  document.getElementById("panel").value + " " +val;
+            }
+            
+            function sumar() {
+                document.getElementById("panel").value = num1 + num2;
+                num1 =0;
+                num2 =0;
+            }
+            
+            
+        </script>
+    </head>
+<body>
+
+<h2>Modificar valores del css</h2>
+
+<p id="demo">Ocultar elementos del html.</p>
+
+<form>
+    <input type="text" id="panel">    
+    <button type="button" onclick="cargavalor(1,'1')">1</button>
+    <button type="button" onclick="cargavalor(2,'2')">2</button>
+    <button type="button" onclick="sumar()">+</button>    
+</form>
+
+
+</body>
+</html> 
