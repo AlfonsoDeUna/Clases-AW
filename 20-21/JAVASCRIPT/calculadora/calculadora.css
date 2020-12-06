@@ -1,0 +1,30 @@
+.calculator {
+    display: block;
+    margin: 0 auto;
+    padding: 20px;
+    background-color: #2980b9;
+    width: 400px;
+    height: 500px;
+    border-radius:25px;
+}
+
+.calculator td button {
+    display: block;
+    width:70px;
+    height:70px;
+    font-size: 25px;
+}
+
+#resultado {
+    display:block;
+    text-align:center;
+    font-size: 40px;
+    margin-bottom:50px;
+    width:300px;
+    height:100px;
+    background-color: white;
+    color:black;
+    line-height:100px;
+    /*border-radius: 25px;*/
+    overflow-y:scroll;
+}
