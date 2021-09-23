@@ -9,8 +9,8 @@ asñldkfjasñldkfjasdf
 
 ## el menú
 
-## cómo convertir binario a decimal
+#### cómo convertir binario a decimal
 
-''' 
+``` 
   [convert]::toInt32()
-''' 
+``` 
