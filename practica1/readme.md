@@ -6,3 +6,11 @@ asñldkfjasñldkfjasdf
 
 * ejemplo1
 * ejemplo2
+
+## el menú
+
+## cómo convertir binario a decimal
+
+''' 
+  [convert]::toInt32()
+''' 
